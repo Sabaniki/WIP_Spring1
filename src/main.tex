@@ -1,0 +1,135 @@
+%
+% LaTeX2e template for FIT2002
+%
+
+
+\documentclass[a4j,twocolumn]{ujarticle}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage{ascmac}
+\usepackage{url}
+
+
+
+\makeatletter
+\def\section{\@startsection{section}{1}{\z@}{2ex plus .2ex minus .2ex}%
+{.5ex plus .2ex minus .2ex}{\large\bfseries}}
+\def\thesection{\arabic{section}.}
+\def\subsection{\@startsection{subsection}{1}{\z@}{.7ex plus .2ex minus .2ex}%
+{.5ex plus .2ex minus .2ex}{\normalsize\bfseries}}
+\def\thesubsection{\arabic{section}.\arabic{subsection}}
+\def\thefootnote{\fnsymbol{footnote}}
+\makeatother
+
+
+\def\baselinestretch{0.8}
+
+\setlength{\textheight}{23.5cm}%297-30-27 - 5
+\setlength{\textwidth}{17.4cm}%210-18-18 - 10
+%\setlength{\headheight}{0.0in}
+\setlength{\headsep}{0.0in}
+\setlength{\oddsidemargin}{-.9cm}%+3
+\setlength{\evensidemargin}{-.9cm}%+3
+\setlength{\columnsep}{7mm}
+
+
+% local settings
+
+% end of local settings
+
+
+\begin{document}
+    \pagestyle{empty}
+    \thispagestyle{empty}
+
+    \twocolumn[%
+        \begin{center}
+        {\Large 今学期作ったもの}
+            \vspace{.5ex}
+
+            {\Large\sffamily }\vspace{1ex}
+
+
+
+            \large
+            \mbox{}
+            \hfil
+            \setcounter{footnote}{2}
+            {\bfseries Sociable Robots B1 澤田 開杜(sabaniki)}${}^\thefootnote$
+            \hfil
+            \setcounter{footnote}{3}
+            {\bfseries 親：hoge hoge(login名)}${}^\thefootnote$
+            \hfil
+            \mbox{}
+
+            \mbox{}
+            \hfil
+            {\sffamily}
+            \hfil
+            {\sffamily}
+            \hfil
+            \mbox{}
+            \hfil
+
+        \end{center}
+    ]
+
+    \setcounter{footnote}{2}
+    \footnotetext{慶應義塾大学　環境情報学部}
+
+\section{概要}
+私が今学期製作した4つのプロダクトについて報告する。4つのプロダクトとは以下の表\ref{ProductsSem}に示した通りである。
+毎月別のプロダクトに着手し、そのうち2つについては現在も開発を積極的に続けている。
+
+\begin{table}[h]
+    \caption{今学期製作したもの一覧}
+    \label{ProductsSem}
+    \centering
+    \begin{tabular}{lcr}
+        \hline
+        着手時期 & 名前 \\
+        \hline \hline
+        4月 & ARplusR \\
+        5月 & MTG-Shuffle \\
+        6月〜 & IoT-Fam \\
+        7月〜 & Over-Comment \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\section{ARplusR}
+\subsection{概要}
+プロダクトの名前のARplusRとはAR+Robotを意味している。ARとロボットの組み合わせに興味が湧いたため、
+プロトタイプとして、ARの入門も兼ねて作成したものである。
+今回は実物のロボットを使わずに、ロボットも仮のものをAR上のオブジェクトで作成した。
+
+\subsection{実装した機能}
+以下に図\ref{ARRobotImage}として実際のアプリケーションのスクリーンショットを示す。
+平面をアプリケーションで検知し、その面に対して障害物に見立てた灰色の立方体を設置することができる。
+すると、ロボットに見立てた黄色の立方体がその障害物を避けて前進するというものである。
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=4cm]{../assets/AR-Robot.jpg}
+\caption{実際に作ったARアプリ}
+\label{ARRobotImage}
+\end{figure}
+
+\subsection{展望}
+
+
+\section{MTG-Shuffle}
+MTG-Shuffleについてお話しします
+
+\section{IoT-Fam}
+IoT-Famについてお話します
+
+\section{Over-Comment}
+Over-Commentについてお話します
+
+\bibliographystyle{junsrt}
+\bibliography{bib.bib}
+
+
+
+\end{document}
