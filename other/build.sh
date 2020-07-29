@@ -1,0 +1,1 @@
+ptex2pdf -output-directory=../out/ -l -u -ot -kanji=utf8 $synctexoption $fullname $1
