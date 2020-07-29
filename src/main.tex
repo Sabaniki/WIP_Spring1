@@ -109,7 +109,7 @@
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=4cm]{../assets/AR-Robot.jpg}
+\includegraphics[width=3cm]{../assets/AR-Robot.jpg}
 \caption{実際に作ったARアプリ}
 \label{ARRobotImage}
 \end{figure}
@@ -140,7 +140,7 @@ ARに興味がなくなったわけではなく、Apple Glassなどのまだ見�
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=4cm]{../assets/MTG-Shuffle.jpg}
+\includegraphics[width=5cm]{../assets/MTG-Shuffle.jpg}
 \caption{MTG-Shuffle}
 \label{MtgShuffleImage}
 \end{figure}
@@ -161,7 +161,7 @@ ARに興味がなくなったわけではなく、Apple Glassなどのまだ見�
 各IoTが受動的で無機質にタスクをこなすという状態に対して私は疑問を感じたため製作を始めた。
 \begin{figure}[h]
 \centering
-\includegraphics[width=4cm]{../assets/IoT-Fam.jpg}
+\includegraphics[width=5cm]{../assets/IoT-Fam.jpg}
 \caption{IoT-Fam}
 \label{IoTFam}
 \end{figure}
@@ -176,7 +176,7 @@ JSON→会話の生成や会話→JSON生成については本格的な会話シ
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=6cm]{../assets/sys-strc.jpg}
+\includegraphics[width=8cm]{../assets/sys-strc.jpg}
 \caption{IoT-Famシステム構成}
 \label{IoTFamSys}
 \end{figure}
@@ -193,7 +193,7 @@ JSON→会話の生成や会話→JSON生成については本格的な会話シ
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=6cm]{../assets/temp.JPG}
+\includegraphics[width=5cm]{../assets/temp.JPG}
 \caption{温度計デバイス}
 \label{TempImage}
 \end{figure}
@@ -209,7 +209,7 @@ JSON→会話の生成や会話→JSON生成については本格的な会話シ
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=6cm]{../assets/AirCon.JPG}
+\includegraphics[width=5cm]{../assets/AirCon.JPG}
 \caption{エアコン制御デバイス}
 \label{AirConImage}
 \end{figure}
@@ -224,7 +224,31 @@ JSON→会話の生成や会話→JSON生成については本格的な会話シ
 ないかと考えている。
 
 \section{Over-Comment}
-Over-Commentについてお話します
+\subsection{概要}
+このプロダクトはZoomやWebex上でニコニコ動画のようなコメントシステムを再現するというものである。
+ZoomやWebexでのコメントは通知が控えめで気が付きにくく、送信者側も相手に届いてるいるという確証を
+持ちにくいと私は感じた。ニコニコ動画のようなコメントシステムなら、追いきれない程の量でなければ
+コメントが目に入らないということは少ないと考え、この形式を採用した。今回はコメントを表示する
+デスクトップアプリケーション、コメントの送信や履歴の閲覧などを行うためのWebアプリケーション
+の二つを作成した。
+
+\subsection{システム構成}
+以下に図\ref{sys-strc-oc}として簡略的なシステム構成図を示す。Webアプリケーション部分はAngularを用いて開発し、Firebase上で
+ホスティングしている。Webアプリケーション部分でコメントをデータベース(Firebase Realtime Database)に送信すると、
+そのデータベースの変更を検知してデスクトップアプリケーション側でコメントを受け取るという仕組みになっている。また、Webアプリケーション
+のコメントの履歴機能についても同じ様にデータベースの変更を検知し、リアルタイムに履歴が反映されるようになっている。
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=8cm]{../assets/sys-strc-oc.jpg}
+\caption{Over-Commentシステム構成}
+\label{sys-strc-oc}
+\end{figure}
+
+\subsection{実装した機能}
+
+\subsubsection{デスクトップアプリケーション}
+以下に図\ref{dsk-app}として
 
 \bibliographystyle{junsrt}
 \bibliography{bib.bib}
